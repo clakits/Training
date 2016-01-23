@@ -1,0 +1,29 @@
+Reset all VM connectivity 
+0. Download the VMware vSphere PowerCLI to a windows VM 
+1. Connect-VIServer -Server 10.201.35.4 -User root -Password Cisc0123
+2. Get-VM | Get-NetworkAdapter | Set-NetworkAdapter -NetworkName “VM Network”   -Confirm:$false (# if we have "-Connect:$false" on the CLI, then we need to ssh to the ESXi host to connect the vcenter VM's nic) 
+3. Get-VMHost | Get-VMHostNetworkAdapter -VMKernel | ? {$_.PortgroupName -eq "vtep"} | Remove-VMHostNetworkAdapter
+ 
+4. Remove the ACI created DVS from Inventory->Networking
+
+Reset APIC: 
+1. Go to "VM Networking" and "Policies"
+2. Expand on policies--> vmware--> right click and delete the VM switch polices
+3. Click on fabric--> Inventory--> select "topology"  
+4. from the topology identify the leaf where APIC is NOT connected and decommision the switch and select "remove from           controller". (using putty open console and wait for about 5 mins)	
+
+Note:- The switch that connects the APIC HAS to be the last device to be decommisioned from the setup.
+
+5. now decommission other switches using step 4. 
+
+   
+6. Using kvm connect to "APIC console", login with your credentials and issue 'eraseconfig setup' command.
+(Use SOL - ssh to CIMC "show sol" if it's not enabled, enable SOL as following:
+scope sol
+set enabled yes
+set baud-rate 115200
+set comport com0
+commit
+exit
+)
+
