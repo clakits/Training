@@ -1,0 +1,16 @@
+
+ 
+	<vmmDomP dn="uni/vmmp-VMware/dom-ACI_DVS" enfPref="hw" mcastAddr="0.0.0.0" mode="default" name="ACI_DVS" ownerKey="" ownerTag="">
+		<vmmRsDefaultStpIfPol tnStpIfPolName="default"/>
+		<vmmRsDefaultFwPol tnNwsFwPolName="default"/>
+		<vmmRsDefaultLldpIfPol tnLldpIfPolName="default"/>
+		<vmmCtrlrP dvsVersion="5.5" hostOrIp="10.29.198.74" inventoryTrigSt="untriggered" mode="default" msftConfigIssues="" name="Pod3_Vcenter_Controller" port="0" rootContName="POD3DC" scope="vm" statsMode="disabled">
+			<vmmRsAcc tDn="uni/vmmp-VMware/dom-ACI_DVS/usracc-POD3_vcenter"/>
+		</vmmCtrlrP>
+		<infraRsVlanNs tDn="uni/infra/vlanns-[VMM_Vlan_Pool]-dynamic"/>
+		<vmmRsDefaultCdpIfPol tnCdpIfPolName="default"/>
+		<vmmRsDefaultLacpLagPol tnLacpLagPolName="default"/>
+		<vmmRsDefaultL2InstPol tnL2InstPolName="default"/>
+		<vmmUsrAccP descr="" name="POD3_vcenter" ownerKey="" ownerTag="" usr="root" pwd="C1sc0123" />
+	</vmmDomP>
+ 

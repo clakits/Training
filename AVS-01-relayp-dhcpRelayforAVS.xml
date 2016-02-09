@@ -1,0 +1,5 @@
+<!--  https://10.29.198.63/api/node/mo/uni/tn-infra.xml -->
+<dhcpRelayP name="dhcpRelayforAVS" owner="infra" ownerKey="" ownerTag="">
+		<dhcpRsProv addr="0.0.0.0" tDn="uni/tn-infra/ap-access/epg-default"/>
+</dhcpRelayP>
+ 

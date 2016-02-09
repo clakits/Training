@@ -1,0 +1,14 @@
+<vmmDomP dn="uni/vmmp-VMware/dom-Pod2_AVSDomain" enfPref="hw" mcastAddr="225.2.2.5" mode="n1kv" name="Pod2_AVSDomain" ownerKey="" ownerTag="">
+		<vmmRsDefaultStpIfPol tnStpIfPolName="default"/>
+		<vmmRsDefaultFwPol tnNwsFwPolName="default"/>
+		<vmmRsDomMcastAddrNs tDn="uni/infra/maddrns-mcastPoolforAVS"/>
+		<vmmRsDefaultLldpIfPol tnLldpIfPolName="default"/>
+		<vmmCtrlrP dvsVersion="5.5" hostOrIp="10.29.198.74" inventoryTrigSt="untriggered" mode="default" msftConfigIssues="" name="Pod3_vCenter" port="0" rootContName="POD3DC" scope="vm" statsMode="disabled">
+			<vmmRsAcc tDn="uni/vmmp-VMware/dom-Pod2_AVSDomain/usracc-vCenterCredential"/>
+		</vmmCtrlrP>
+		<vmmRsDefaultCdpIfPol tnCdpIfPolName="default"/>
+		<vmmRsDefaultLacpLagPol tnLacpLagPolName="default"/>
+		<vmmRsDefaultL2InstPol tnL2InstPolName="default"/>
+		<vmmUsrAccP descr="" name="vCenterCredential" ownerKey="" ownerTag="" usr="root" pwd="C1sc0123" />
+</vmmDomP>
+ 

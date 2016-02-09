@@ -1,0 +1,5 @@
+<!--  https://10.29.198.63/api/node/mo/uni/tn-infra.xml -->
+<dhcpLbl descr="" dn="uni/tn-infra/BD-default/dhcplbl-dhcpRelayforAVS" name="dhcpRelayforAVS" owner="tenant" ownerKey="" ownerTag="" tag="yellow-green">
+		<dhcpRsDhcpOptionPol tnDhcpOptionPolName="default"/>
+</dhcpLbl>
+ 

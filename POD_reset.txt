@@ -18,7 +18,8 @@ Note:- The switch that connects the APIC HAS to be the last device to be decommi
 
    
 6. Using kvm connect to "APIC console", login with your credentials and issue 'eraseconfig setup' command.
-(Use SOL - ssh to CIMC "show sol" if it's not enabled, enable SOL as following:
+(Use SOL - ssh to CIMC "connect host" 
+Remark: "show sol" if it's not enabled, enable SOL as following:
 scope sol
 set enabled yes
 set baud-rate 115200
